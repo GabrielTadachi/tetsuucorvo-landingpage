@@ -1,5 +1,4 @@
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { CircleAlertIcon } from "lucide-react";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
 import { Link } from "react-router";
 
 export const Header = () => {
@@ -46,13 +45,4 @@ export const Header = () => {
         </div>
     )
 }
-
-const LinkLivro = ({ title, redirect }: { title: string, redirect: string }) => (
-    <NavigationMenuLink asChild>
-        <Link to={redirect} className="w-full flex flex-row gap-2">
-            <CircleAlertIcon size={10} />
-            {title}
-        </Link>
-    </NavigationMenuLink>
-)
 

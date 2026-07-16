@@ -124,3 +124,40 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  /* Atmosfera de sangue/grunge (fundo principal) */
+  .bg-blood {
+    position: relative;
+    background-color: #0d0203;
+    background-image:
+      radial-gradient(120% 85% at 50% -25%, rgba(150, 6, 6, 0.7) 0%, rgba(70, 0, 0, 0.35) 35%, transparent 62%),
+      radial-gradient(90% 70% at 100% 20%, rgba(96, 0, 0, 0.5) 0%, transparent 55%),
+      radial-gradient(90% 75% at 0% 55%, rgba(52, 0, 0, 0.55) 0%, transparent 55%),
+      radial-gradient(110% 80% at 50% 120%, rgba(8, 1, 1, 0.95) 0%, transparent 60%),
+      linear-gradient(180deg, #170305 0%, #0a0102 55%, #060101 100%);
+    background-attachment: fixed;
+  }
+
+  /* Textura granulada por cima do fundo */
+  .bg-blood::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.14;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Moldura padrão de imagens */
+  .img-frame {
+    border-radius: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+      0 0 0 1px rgba(150, 6, 6, 0.25),
+      0 10px 40px rgba(133, 1, 1, 0.28),
+      0 20px 60px rgba(0, 0, 0, 0.55);
+  }
+}
