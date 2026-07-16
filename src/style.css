@@ -117,11 +117,38 @@
   * {
     @apply border-border outline-ring/50;
   }
-  html, body {
-    @apply h-full w-full;
+  html {
+    color-scheme: dark;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(200, 26, 26, 0.55) #0a0405;
+  }
+  html, body, #root {
+    @apply min-h-full w-full;
+    background-color: #0a0405;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background-color: #0a0405;
+  }
+
+  /* Scrollbar da página (Chrome/Edge/Safari) */
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  html::-webkit-scrollbar-track,
+  body::-webkit-scrollbar-track {
+    background: #0a0405;
+  }
+  html::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #c81a1a, #5c0000);
+    border-radius: 999px;
+    border: 2px solid #0a0405;
+  }
+  html::-webkit-scrollbar-thumb:hover,
+  body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #e11d1d, #7a0000);
   }
 }
 
@@ -159,5 +186,29 @@
       0 0 0 1px rgba(150, 6, 6, 0.25),
       0 10px 40px rgba(133, 1, 1, 0.28),
       0 20px 60px rgba(0, 0, 0, 0.55);
+  }
+
+  /* Scroll das reviews — tema escuro/sangue */
+  .review-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(200, 26, 26, 0.55) rgba(255, 255, 255, 0.06);
+  }
+
+  .review-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .review-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 999px;
+  }
+
+  .review-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #c81a1a, #7a0000);
+    border-radius: 999px;
+  }
+
+  .review-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #e11d1d, #8a0000);
   }
 }

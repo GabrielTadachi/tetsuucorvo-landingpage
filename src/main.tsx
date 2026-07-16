@@ -8,7 +8,9 @@ const DefaultTemplate = () => {
   return (
     <>
       <Header />
-      <Outlet />
+      <div className="pt-24 md:pt-24 bg-[#0a0405]">
+        <Outlet />
+      </div>
     </>
   )
 }

@@ -169,6 +169,16 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
   )
 }
 
+const carouselNavBtn = `
+  !size-9 !p-0 !gap-0
+  inline-flex items-center justify-center
+  !bg-black/85 hover:!bg-[#c81a1a]
+  !text-white !border-white/50
+  shadow-[0_4px_16px_rgba(0,0,0,0.5)]
+  disabled:!bg-black/40 disabled:!text-white/35 disabled:!border-white/15
+  [&_svg]:!size-4 [&_svg]:shrink-0
+`
+
 function CarouselPrevious({
   className,
   variant = "outline",
@@ -182,8 +192,10 @@ function CarouselPrevious({
       data-slot="carousel-previous"
       variant={variant}
       size={size}
+      aria-label="Slide anterior"
       className={cn(
-        "absolute size-8 rounded-full",
+        "absolute rounded-full",
+        carouselNavBtn,
         orientation === "horizontal"
           ? "top-1/2 -left-12 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -193,8 +205,7 @@ function CarouselPrevious({
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft />
-      <span className="sr-only">Previous slide</span>
+      <ArrowLeft strokeWidth={2.5} />
     </Button>
   )
 }
@@ -212,8 +223,10 @@ function CarouselNext({
       data-slot="carousel-next"
       variant={variant}
       size={size}
+      aria-label="Próximo slide"
       className={cn(
-        "absolute size-8 rounded-full",
+        "absolute rounded-full",
+        carouselNavBtn,
         orientation === "horizontal"
           ? "top-1/2 -right-12 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -223,8 +236,7 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight />
-      <span className="sr-only">Next slide</span>
+      <ArrowRight strokeWidth={2.5} />
     </Button>
   )
 }
