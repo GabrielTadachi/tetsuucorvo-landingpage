@@ -77,6 +77,17 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Brand tokens (override per work via themeToCssVars) */
+  --brand-accent: #ff5a3c;
+  --brand-star: #fe6300;
+  --brand-cta-from: #c81a1a;
+  --brand-cta-to: #7a0000;
+  --brand-cta-border: #ff5a3c;
+  --brand-title-from: #e11d1d;
+  --brand-title-to: #5c0000;
+  --brand-surface: #0a0405;
+  --brand-bg-tint: #960606;
 }
 
 .dark {
@@ -120,15 +131,16 @@
   html {
     color-scheme: dark;
     scrollbar-width: thin;
-    scrollbar-color: rgba(200, 26, 26, 0.55) #0a0405;
+    scrollbar-color: color-mix(in srgb, var(--brand-cta-from) 55%, transparent) var(--brand-surface);
+    scroll-padding-top: 6rem;
   }
   html, body, #root {
     @apply min-h-full w-full;
-    background-color: #0a0405;
+    background-color: var(--brand-surface);
   }
   body {
     @apply text-foreground;
-    background-color: #0a0405;
+    background-color: var(--brand-surface);
   }
 
   /* Scrollbar da página (Chrome/Edge/Safari) */
@@ -138,38 +150,39 @@
   }
   html::-webkit-scrollbar-track,
   body::-webkit-scrollbar-track {
-    background: #0a0405;
+    background: var(--brand-surface);
   }
   html::-webkit-scrollbar-thumb,
   body::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #c81a1a, #5c0000);
+    background: linear-gradient(180deg, var(--brand-cta-from), var(--brand-title-to));
     border-radius: 999px;
-    border: 2px solid #0a0405;
+    border: 2px solid var(--brand-surface);
   }
   html::-webkit-scrollbar-thumb:hover,
   body::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #e11d1d, #7a0000);
+    background: linear-gradient(180deg, var(--brand-title-from), var(--brand-cta-to));
   }
 }
 
 @layer components {
-  /* Atmosfera de sangue/grunge (fundo principal) */
+  /* Atmosfera temática (fundo principal) — tints via --brand-bg-tint */
   .bg-blood {
     position: relative;
+    z-index: 0;
     background-color: #0d0203;
     background-image:
-      radial-gradient(120% 85% at 50% -25%, rgba(150, 6, 6, 0.7) 0%, rgba(70, 0, 0, 0.35) 35%, transparent 62%),
-      radial-gradient(90% 70% at 100% 20%, rgba(96, 0, 0, 0.5) 0%, transparent 55%),
-      radial-gradient(90% 75% at 0% 55%, rgba(52, 0, 0, 0.55) 0%, transparent 55%),
+      radial-gradient(120% 85% at 50% -25%, color-mix(in srgb, var(--brand-bg-tint, #960606) 70%, transparent) 0%, color-mix(in srgb, var(--brand-bg-tint, #960606) 35%, transparent) 35%, transparent 62%),
+      radial-gradient(90% 70% at 100% 20%, color-mix(in srgb, var(--brand-bg-tint, #960606) 50%, transparent) 0%, transparent 55%),
+      radial-gradient(90% 75% at 0% 55%, color-mix(in srgb, var(--brand-bg-tint, #960606) 40%, transparent) 0%, transparent 55%),
       radial-gradient(110% 80% at 50% 120%, rgba(8, 1, 1, 0.95) 0%, transparent 60%),
       linear-gradient(180deg, #170305 0%, #0a0102 55%, #060101 100%);
     background-attachment: fixed;
   }
 
-  /* Textura granulada por cima do fundo */
+  /* Textura granulada por cima do fundo (absolute — não cobre o header fixo) */
   .bg-blood::before {
     content: "";
-    position: fixed;
+    position: absolute;
     inset: 0;
     z-index: 0;
     pointer-events: none;
@@ -183,15 +196,15 @@
     border-radius: 0.75rem;
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow:
-      0 0 0 1px rgba(150, 6, 6, 0.25),
-      0 10px 40px rgba(133, 1, 1, 0.28),
+      0 0 0 1px color-mix(in srgb, var(--brand-bg-tint, #960606) 25%, transparent),
+      0 10px 40px color-mix(in srgb, var(--brand-bg-tint, #960606) 28%, transparent),
       0 20px 60px rgba(0, 0, 0, 0.55);
   }
 
-  /* Scroll das reviews — tema escuro/sangue */
+  /* Scroll das reviews — tema escuro */
   .review-scroll {
     scrollbar-width: thin;
-    scrollbar-color: rgba(200, 26, 26, 0.55) rgba(255, 255, 255, 0.06);
+    scrollbar-color: color-mix(in srgb, var(--brand-cta-from) 55%, transparent) rgba(255, 255, 255, 0.06);
   }
 
   .review-scroll::-webkit-scrollbar {
@@ -204,11 +217,11 @@
   }
 
   .review-scroll::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #c81a1a, #7a0000);
+    background: linear-gradient(180deg, var(--brand-cta-from), var(--brand-cta-to));
     border-radius: 999px;
   }
 
   .review-scroll::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #e11d1d, #8a0000);
+    background: linear-gradient(180deg, var(--brand-title-from), var(--brand-cta-to));
   }
 }
