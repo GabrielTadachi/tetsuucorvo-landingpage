@@ -142,21 +142,23 @@ export const canilDosCondenados: Work = {
           {
             title: 'Só o livro',
             description: 'O conto impresso, entregue na sua casa.',
-            price: 'R$ 34,90',
+            price: 'R$ 34,90 + frete',
             image: '/mockup2.png',
             imageAlt: 'Livro Canil dos Condenados',
             includes: ['Livro físico'],
             buttonLabel: 'Quero só o livro',
+            url: "https://tetsuucorvo.pay.yampi.com.br/r/OWO0U8LBB4"
           },
           {
             title: 'Edição completa',
             description:
               'Livro + marcador + pin + polaroid Canavarro — a experiência completa do universo.',
-            price: 'R$ 59,90',
+            price: 'R$ 59,90 + frete',
             image: '/bonus/edicao-completa.png',
             imageAlt: 'Edição completa Canil dos Condenados com brindes',
             includes: ['Livro físico', 'Marcador', 'Pin colecionável', 'Polaroid Canavarro'],
             buttonLabel: 'Quero a edição completa',
+            url: "https://tetsuucorvo.pay.yampi.com.br/r/PX46QVUY73"
           },
         ],
       },
