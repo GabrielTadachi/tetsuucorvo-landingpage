@@ -97,8 +97,8 @@ export const canilDosCondenados: Work = {
   },
 
   edition: {
-    eyebrow: 'A edição',
-    title: 'O que você recebe',
+    eyebrow: 'Colecionáveis',
+    title: 'Itens opcionais',
     intro: 'Mais do que uma leitura — uma experiência completa dentro do universo do conto.',
     extras: [
       {
