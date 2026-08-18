@@ -71,9 +71,10 @@ export const canilDosCondenados: Work = {
       'Medo do que não se compreende. Medo de grandes escolhas. E, principalmente, medo de não corresponder ao que esperam de você.',
       'Adiar também é uma escolha... E nem sempre a mais segura.',
     ],
-    highlightWords: ['medo'],
+    highlightWords: ['medo', 'a mais segura'],
     characters: [
       { img: '/severino_fuba_pistola.png', name: 'Severino, Fubá e Pistola' },
+      { img: '/Alvaro.png', name: 'Alvaro' },
       { img: '/romulo.png', name: 'Rômulo' },
       { img: '/1.png', name: 'Diane' },
       { img: '/2.png', name: 'Helena' },
@@ -101,20 +102,20 @@ export const canilDosCondenados: Work = {
     intro: 'Mais do que uma leitura — uma experiência completa dentro do universo do conto.',
     extras: [
       {
-        title: 'Kit de marcadores',
-        description: 'Três marcadores com frases e personagens do conto. Compra avulsa.',
+        title: 'Marcadores',
+        description: 'Escolha entre dois tipos de marcadores.',
         image: '/bonus/marcadores.png',
         imageAlt: 'Kit com três marcadores de Canil dos Condenados',
       },
       {
         title: 'Pins colecionáveis',
-        description: 'Bottons do Corvo e do Xolotl. Compra avulsa.',
+        description: 'Bottons do Corvo e do Xolotl.',
         image: '/bonus/pins.png',
         imageAlt: 'Pins colecionáveis Canil dos Condenados',
       },
       {
         title: 'Polaroid Canavarro',
-        description: 'Arte digital da família Canavarro. Compra avulsa.',
+        description: 'Arte digital da família Canavarro.',
         image: '/bonus/polaroide.png',
         imageAlt: 'Polaroid da família Canavarro',
       },
@@ -122,27 +123,27 @@ export const canilDosCondenados: Work = {
   },
 
   purchase: {
-    eyebrow: 'O corvo não espera...',
+    eyebrow: 'O corvo está sempre observando...',
     title: 'Adquira sua cópia',
     intro: 'Escolha o formato que mais combina com você.',
     options: [
       {
         label: 'E-book',
-        price: 'R$ 19,90',
+        price: 'R$ 5,99',
         description: 'Entrega imediata • leia em qualquer dispositivo',
         buttonLabel: 'Comprar E-book',
         url: 'https://www.amazon.com.br/dp/B0FQK61S4F',
       },
       {
         label: 'Versão física',
-        price: 'A partir de R$ 34,90',
+        price: 'A partir de R$ 24,99',
         description: 'Livro impresso — escolha a edição que prefere',
         buttonLabel: 'Comprar Versão Física',
         choices: [
           {
             title: 'Só o livro',
             description: 'O conto impresso, entregue na sua casa.',
-            price: 'R$ 34,90 + frete',
+            price: 'R$ 24,99 + frete',
             image: '/mockup2.png',
             imageAlt: 'Livro Canil dos Condenados',
             includes: ['Livro físico'],
@@ -153,7 +154,7 @@ export const canilDosCondenados: Work = {
             title: 'Edição completa',
             description:
               'Livro + marcador + pin + polaroid Canavarro — a experiência completa do universo.',
-            price: 'R$ 59,90 + frete',
+            price: 'R$ 29,99 + frete',
             image: '/bonus/edicao-completa.png',
             imageAlt: 'Edição completa Canil dos Condenados com brindes',
             includes: ['Livro físico', 'Marcador', 'Pin colecionável', 'Polaroid Canavarro'],

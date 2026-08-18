@@ -41,7 +41,7 @@ export function EditionSection({
             </span>
             <h3 className="text-xl font-bold text-white">Compras adicionais</h3>
             <p className="text-sm text-gray-400">
-              Quer só o merch? Estes itens também podem ser comprados avulsos.
+              Quer complementar sua experiência? Estes produtos também estão disponíveis para compra.
             </p>
           </div>
 
