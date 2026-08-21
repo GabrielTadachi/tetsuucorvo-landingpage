@@ -80,11 +80,11 @@ function PhysicalChoiceModal({
               key={choice.title}
               className="flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-black/40"
             >
-              <div className="flex aspect-[4/3] items-center justify-center bg-black/50 p-4">
+              <div className="relative aspect-[4/3] overflow-hidden bg-black/50 p-4">
                 <img
                   src={choice.image}
                   alt={choice.imageAlt}
-                  className="max-h-full max-w-full object-contain"
+                  className="block h-full w-full object-contain"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-3 p-5">

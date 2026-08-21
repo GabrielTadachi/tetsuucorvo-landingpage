@@ -51,13 +51,13 @@ export function EditionSection({
                 key={extra.title}
                 type="button"
                 onClick={() => onExpandImage?.(extra.image)}
-                className="group flex flex-col overflow-hidden rounded-xl border border-white/10 bg-black/30 text-left transition-[border-color,transform] duration-300 hover:border-white/25 hover:scale-[1.01]"
+                className="group flex w-full min-w-0 flex-col overflow-hidden rounded-xl border border-white/10 bg-black/30 text-left transition-[border-color,transform] duration-300 hover:border-white/25 hover:scale-[1.01]"
               >
-                <div className="flex aspect-square items-center justify-center bg-black/40 p-3">
+                <div className="relative aspect-square overflow-hidden bg-black/40 p-3">
                   <img
                     src={extra.image}
                     alt={extra.imageAlt}
-                    className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    className="block h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="flex flex-col gap-1.5 p-4">
