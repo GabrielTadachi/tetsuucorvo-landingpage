@@ -35,16 +35,6 @@ export function EditionSection({
         <CardDescription className="px-6 pb-6 text-gray-300">
           <p className="text-lg mb-6">{intro}</p>
 
-          <div className="mb-4 flex flex-col gap-1">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
-              Separadamente
-            </span>
-            <h3 className="text-xl font-bold text-white">Compras adicionais</h3>
-            <p className="text-sm text-gray-400">
-              Quer complementar sua experiência? Estes produtos também estão disponíveis para compra.
-            </p>
-          </div>
-
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {extras.map((extra) => (
               <button

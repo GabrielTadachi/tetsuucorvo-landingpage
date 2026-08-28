@@ -98,18 +98,19 @@ export const canilDosCondenados: Work = {
 
   edition: {
     eyebrow: 'Colecionáveis',
-    title: 'Itens opcionais',
-    intro: 'Mais do que uma leitura — uma experiência completa dentro do universo do conto.',
+    title: 'A experiência completa inclui brindes especiais',
+    intro:
+      'Além da história, a edição completa acompanha marcadores exclusivos, pins colecionáveis e uma polaroid da família Canavarro, tudo incluso no pacote.',
     extras: [
       {
-        title: 'Marcadores',
-        description: 'Escolha entre dois tipos de marcadores.',
+        title: 'Marcadores exclusivos',
+        description: 'Você receberá um dos modelos disponíveis, escolhido aleatoriamente.',
         image: '/bonus/marcadores.png',
         imageAlt: 'Kit com três marcadores de Canil dos Condenados',
       },
       {
         title: 'Pins colecionáveis',
-        description: 'Bottons do Corvo e do Xolotl.',
+        description: 'O modelo enviado será escolhido aleatoriamente entre os pins disponíveis do Corvo e do Xolotl.',
         image: '/bonus/pins.png',
         imageAlt: 'Pins colecionáveis Canil dos Condenados',
       },
