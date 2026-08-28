@@ -143,7 +143,7 @@ export const canilDosCondenados: Work = {
           {
             title: 'Só o livro',
             description: 'O conto impresso, entregue na sua casa.',
-            price: 'R$ 24,99 + frete',
+            price: 'R$ 24,99',
             image: '/mockup2.png',
             imageAlt: 'Livro Canil dos Condenados',
             includes: ['Livro físico'],
@@ -154,7 +154,7 @@ export const canilDosCondenados: Work = {
             title: 'Edição completa',
             description:
               'Livro + marcador + pin + polaroid Canavarro — a experiência completa do universo.',
-            price: 'R$ 29,99 + frete',
+            price: 'R$ 29,99',
             image: '/bonus/edicao-completa.png',
             imageAlt: 'Edição completa Canil dos Condenados com brindes',
             includes: ['Livro físico', 'Marcador', 'Pin colecionável', 'Polaroid Canavarro'],
