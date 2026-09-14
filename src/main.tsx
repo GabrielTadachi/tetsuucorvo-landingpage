@@ -1,6 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import './style.css'
 import { createBrowserRouter, RouterProvider } from 'react-router'
+import { Analytics } from '@vercel/analytics/react'
 import { AuthorHome } from './pages/AuthorHome'
 import { WorkPage } from './pages/WorkPage'
 
@@ -16,5 +17,8 @@ const router = createBrowserRouter([
 ])
 
 createRoot(document.getElementById('root')!).render(
-  <RouterProvider router={router} />,
+  <>
+    <RouterProvider router={router} />
+    <Analytics />
+  </>,
 )
